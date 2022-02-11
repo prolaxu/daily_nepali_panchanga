@@ -67,7 +67,7 @@ function App() {
   // Days component
   const Days=({day,setDay})=>{
     const days=[];
-    const days_in_month=bs[year][month];
+    const days_in_month=bs[year][month-1];
     for(let  i=1;i<=days_in_month;i++){
       const selected=day===i?'selected':'';
       days.push(<option value={i} key={i} selected={day == i}>{eng_to_nep(i)}</option>);
