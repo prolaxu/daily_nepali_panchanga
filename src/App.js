@@ -30,7 +30,7 @@ function App() {
   const [day,setDay]=useState(today[2]);
   
   useEffect(()=>{
-    fetch(`https://raw.githubusercontent.com/prolaxu/nepali-panchang-json-db/main/${year}/${month}/${day}.json`)
+    fetch(`https://raw.githubusercontent.com/prolaxu/nepali-panchang-json-db/main/${parseInt(year)}/${parseInt(month)}/${parseInt(day)}.json`)
     .then(res=>res.json())
     .then(data=>{
       setPanchang(data);
