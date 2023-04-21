@@ -42,8 +42,7 @@ function App() {
   const Years=({year,setYear})=>{
     const years=[];
     for(let  i=2078;i<=2090;i++){
-      const selected=year===i?'selected':'';
-      years.push(<option value={i} key={i} selected={year == i}>{eng_to_nep(i)}</option>);
+      years.push(<option value={i} key={i} selected={year === i}>{eng_to_nep(i)}</option>);
     }
     return <select onChange={
       e=>{
@@ -55,8 +54,7 @@ function App() {
   const Months=({month,setMonth})=>{
     const months=[];
     for(let  i=1;i<=12;i++){
-      const selected=month===i?'selected':'';
-      months.push(<option value={i} key={i} selected={month == i}>{eng_to_nep(i)}</option>);
+      months.push(<option value={i} key={i} selected={month === i}>{eng_to_nep(i)}</option>);
     }
     return <select onChange={
       e=>{
@@ -69,8 +67,7 @@ function App() {
     const days=[];
     const days_in_month=bs[year][month-1];
     for(let  i=1;i<=days_in_month;i++){
-      const selected=day===i?'selected':'';
-      days.push(<option value={i} key={i} selected={day == i}>{eng_to_nep(i)}</option>);
+      days.push(<option value={i} key={i} selected={day === i}>{eng_to_nep(i)}</option>);
     }
 
     return <select onChange={
